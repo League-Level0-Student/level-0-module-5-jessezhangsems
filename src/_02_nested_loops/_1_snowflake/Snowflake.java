@@ -1,3 +1,4 @@
+hi
 package _02_nested_loops._1_snowflake;
 
 import java.awt.Color;
