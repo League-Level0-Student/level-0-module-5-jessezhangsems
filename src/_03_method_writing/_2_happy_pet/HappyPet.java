@@ -35,6 +35,18 @@ if(task==1) {
 if(task==2) {
 	Clean_Up_Poop();
 }
+if(task==3) {
+	Food();
+}
+if(task==4) {
+	Water();
+}
+if (task==5) {
+	Groom();
+}
+if (task==6) {
+	Bring_To_Class();
+}
 			// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 
@@ -83,13 +95,119 @@ if (petlol==4) {
 }
 }
 public static void Clean_Up_Poop() {
-	if (petlol==1) {
-		JOptionPane.showMessageDialog(null, name+" Your dog appreciated it and loves you a lot!");
+	if (petlol==0) {
+		JOptionPane.showMessageDialog(null, name+" appreciated it and loves you a lot!");
 		happinessLevel+=2;
-		
-		
+	}
+	if (petlol==1) {
+		JOptionPane.showMessageDialog(null, name+" appreciated it and loves you a lot!");
+		happinessLevel+=2; 
+	}
+	if (petlol==2) {
+		JOptionPane.showMessageDialog(null, name+" is very happy that its cage isn't dirty anymore!");
+		happinessLevel+=3; 
+	}
+	if (petlol==3) {
+		JOptionPane.showMessageDialog(null, name+", oh what the heck, who am I kidding?");
+		happinessLevel+=0; 
+	}
+	if (petlol==4) {
+		JOptionPane.showMessageDialog(null, name+" threw poop at you and screamed so loudly that you got a noise complaint. ");
+		happinessLevel-=200;
 	}
 }
+public static void Food() {
+	if(petlol==0 ) {
+		JOptionPane.showMessageDialog(null, name+" was very hungry and happily ate the food.");
+		happinessLevel+=4;
+	}
+	if (petlol==1) {
+		JOptionPane.showMessageDialog(null, name+" was very hungry and happily ate the food");
+		happinessLevel+=4;
+	}
+	if (petlol==2) {
+		JOptionPane.showMessageDialog(null, name+" was very hungry and happily ate the food");
+		happinessLevel+=4;
+	}
+	if (petlol==3) {
+		JOptionPane.showMessageDialog(null, name+" didn't eat your food. Why the heck did you choose rock?");
+	}
+	if(petlol==4) {
+		JOptionPane.showMessageDialog(null, name+" didn't eat any of your food, he threw the bowl of monkey doodoo at you and gave you a prion. You died a day later. ");
+		System.exit(0);
+	}
+}
+public static void Water() { 
+	if(petlol==0) {
+		JOptionPane.showMessageDialog(null, name+" was very thirsty and happily drank the water. ");
+		happinessLevel+=4;
+	}
+	if (petlol==1) {
+		JOptionPane.showMessageDialog(null, name+" was very thirsty and happily drank the water. ");
+		happinessLevel+=4;
+	}
+	if (petlol==2) {
+		JOptionPane.showMessageDialog(null, name+" was very thirsty and happily drank the water. ");
+		happinessLevel+=4;
+	}
+	if (petlol==3) {
+		JOptionPane.showMessageDialog(null, name+" didn't drink any of the water. Saying rocks doing nothing is boring so "
+				+ "yeah it danced or whatever. ");
+		happinessLevel+=4;
+	}
+	if (petlol==4) {
+		JOptionPane.showMessageDialog(null, name+" poured the water on a electrical socket, burning down the house. Everyone in the apartment died from smoked inhalation and 3rd degree burns. ");
+		System.exit(0);
+	}
+}
+public static void Groom() {
+	if (petlol==0) {
+		JOptionPane.showMessageDialog(null, name+" splashed around and stuff.");
+		happinessLevel+=4;
+	}
+	if (petlol==1) {
+		JOptionPane.showMessageDialog(null, name+" hated the bath and brushing but appreciates your concern for its lovely fur. .");
+		happinessLevel+=1; 
+	}
+	if (petlol==2) {
+		JOptionPane.showMessageDialog(null, name+" nibbled your finger while you used your hand to scrub the hay off of its back. ");
+		happinessLevel+=5; 
+	}
+	if (petlol==3) {
+		JOptionPane.showMessageDialog(null, name+" it shined like a diamond when you used the sink to wash the dirt off of its surface. ");
+		happinessLevel+=0; 
+	}
+	if (petlol==4) {
+		JOptionPane.showMessageDialog(null, name+" ripped off all of your hair and pooped on your ugly scalp.");
+		happinessLevel-=100; 
+	}
+}
+public static void Bring_To_Class() { 
+	if (petlol==0) {
+		JOptionPane.showMessageDialog(null, name+" made everyone happy and your classmates all fought to pet " + name);
+		happinessLevel+=10;
+	}
+	if (petlol==1) {
+		JOptionPane.showMessageDialog(null, name+" made everyone happy and your class all wanted to pet him. ");
+		happinessLevel=+10;
+	}
+	if (petlol==2) {
+		JOptionPane.showMessageDialog(null, name+" made the your class squeal and everyone looked at him while he was in his cage.");
+		happinessLevel=+10;
+	}
+	if (petlol==3) {
+		JOptionPane.showMessageDialog(null, name+" made everyone tease you for having a pet rock");
+		happinessLevel-=10;
+	}
+	if (petlol==4) {
+		JOptionPane.showMessageDialog(null, name+" killed your whole school, including you while ripping everything up. Police were called and it killed the police."
+				+"\n It went on a destroying spree all around town and it currently is the evil dictator of the world, riding an evil monkey robot while crushing cities. ");
+		happinessLevel-=1000000000;
+	}
+}
+
+
+
 	// 4. Create methods to handle each of your user selections.
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
